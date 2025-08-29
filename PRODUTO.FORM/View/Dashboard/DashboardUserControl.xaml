@@ -1,0 +1,89 @@
+﻿<UserControl x:Class="PRODUTO.FORM.View.Dashboard.DashboardUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="600" d:DesignWidth="1000">
+
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <StackPanel Margin="20" Background="White">
+
+            <TextBlock Text="Dashboard" FontSize="24" FontWeight="Bold"/>
+            <TextBlock Text="Visão geral do sistema" Margin="0,0,0,20" FontSize="14" Foreground="Gray"/>
+
+            <UniformGrid Columns="4" Margin="0,0,0,20" HorizontalAlignment="Stretch">
+                <Border BorderBrush="LightGray" BorderThickness="1" CornerRadius="8" Padding="15" Margin="5">
+                    <StackPanel>
+                        <TextBlock Text="Pessoas Cadastradas" FontWeight="Bold" Margin="0,0,0,10"/>
+                        <TextBlock Text="0" FontSize="28" FontWeight="Bold"/>
+                    </StackPanel>
+                </Border>
+
+                <Border BorderBrush="LightGray" BorderThickness="1" CornerRadius="8" Padding="15" Margin="5">
+                    <StackPanel>
+                        <TextBlock Text="Produtos Cadastrados" FontWeight="Bold" Margin="0,0,0,10"/>
+                        <TextBlock Text="0" FontSize="28" FontWeight="Bold"/>
+                    </StackPanel>
+                </Border>
+
+                <Border BorderBrush="LightGray" BorderThickness="1" CornerRadius="8" Padding="15" Margin="5">
+                    <StackPanel>
+                        <TextBlock Text="Total de Pedidos" FontWeight="Bold" Margin="0,0,0,10"/>
+                        <TextBlock Text="0" FontSize="28" FontWeight="Bold"/>
+                    </StackPanel>
+                </Border>
+
+                <Border BorderBrush="LightGray" BorderThickness="1" CornerRadius="8" Padding="15" Margin="5">
+                    <StackPanel>
+                        <TextBlock Text="Valor Total em Vendas" FontWeight="Bold" Margin="0,0,0,10"/>
+                        <TextBlock Text="R$ 0,00" FontSize="28" FontWeight="Bold"/>
+                    </StackPanel>
+                </Border>
+            </UniformGrid>
+
+            <UniformGrid Columns="2" Margin="0,0,0,20">
+
+                <Border BorderBrush="LightGray" BorderThickness="1" CornerRadius="8" Padding="15" Margin="5">
+                    <StackPanel>
+                        <TextBlock Text="⚠ Pedidos Pendentes" FontSize="16" FontWeight="Bold" Margin="0,0,0,10"/>
+                        <TextBlock Text="Quantidade: 0 pedidos" Margin="0,0,0,5"/>
+                        <TextBlock Text="Valor Total: R$ 0,00"/>
+                    </StackPanel>
+                </Border>
+
+                <Border BorderBrush="LightGray" BorderThickness="1" CornerRadius="8" Padding="15" Margin="5">
+                    <StackPanel>
+                        <TextBlock Text="✔ Pedidos Pagos" FontSize="16" FontWeight="Bold" Margin="0,0,0,10"/>
+                        <TextBlock Text="Quantidade: 0 pedidos" Margin="0,0,0,5"/>
+                        <TextBlock Text="Valor Recebido: R$ 0,00"/>
+                    </StackPanel>
+                </Border>
+            </UniformGrid>
+
+            <TextBlock Text="Ações Rápidas" FontSize="18" FontWeight="Bold" Margin="0,0,0,10"/>
+            <UniformGrid Columns="3">
+                <Border BorderBrush="LightGray" BorderThickness="1" CornerRadius="8" Padding="15" Margin="5">
+                    <StackPanel>
+                        <TextBlock Text="Cadastrar Pessoa" FontSize="16" FontWeight="Bold"/>
+                        <TextBlock Text="Adicionar nova pessoa ao sistema" Foreground="Gray"/>
+                    </StackPanel>
+                </Border>
+
+                <Border BorderBrush="LightGray" BorderThickness="1" CornerRadius="8" Padding="15" Margin="5">
+                    <StackPanel>
+                        <TextBlock Text="Cadastrar Produto" FontSize="16" FontWeight="Bold"/>
+                        <TextBlock Text="Adicionar novo produto ao catálogo" Foreground="Gray"/>
+                    </StackPanel>
+                </Border>
+
+                <Border BorderBrush="LightGray" BorderThickness="1" CornerRadius="8" Padding="15" Margin="5">
+                    <StackPanel>
+                        <TextBlock Text="Novo Pedido" FontSize="16" FontWeight="Bold"/>
+                        <TextBlock Text="Criar pedido para um cliente" Foreground="Gray"/>
+                    </StackPanel>
+                </Border>
+            </UniformGrid>
+        </StackPanel>
+    </ScrollViewer>
+</UserControl>

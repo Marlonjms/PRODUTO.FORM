@@ -1,0 +1,89 @@
+﻿<UserControl x:Class="PRODUTO.FORM.View.Pedidos.PedidosUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="600" d:DesignWidth="1000">
+
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <StackPanel Margin="20" Background="White">
+
+            <!-- Título -->
+            <TextBlock Text="Gerenciar Pedidos"
+                       FontSize="24"
+                       FontWeight="Bold"
+                       Margin="0,0,0,20"/>
+
+            <!-- Seleção de Pessoa -->
+            <Border BorderBrush="LightGray" BorderThickness="1" CornerRadius="8" Padding="15" Margin="0,0,0,20">
+                <StackPanel>
+                    <TextBlock Text="Seleção de Pessoa" FontSize="16" FontWeight="Bold" Margin="0,0,0,10"/>
+                    <ComboBox Height="30" Width="300" HorizontalAlignment="Left" SelectedIndex="0">
+                        <!-- Placeholder -->
+                        <ComboBoxItem IsEnabled="False" IsSelected="True">Selecione uma pessoa...</ComboBoxItem>
+                        <!-- Exemplos de pessoas -->
+                        <ComboBoxItem Content="João"/>
+                        <ComboBoxItem Content="Maria"/>
+                        <ComboBoxItem Content="Carlos"/>
+                    </ComboBox>
+                </StackPanel>
+            </Border>
+
+            <!-- Produtos -->
+            <Border BorderBrush="LightGray" BorderThickness="1" CornerRadius="8" Padding="15" Margin="0,0,0,20">
+                <StackPanel>
+                    <TextBlock Text="Produtos" FontSize="16" FontWeight="Bold" Margin="0,0,0,10"/>
+
+                    <!-- DataGrid para produtos -->
+                    <DataGrid x:Name="ProdutosDataGrid"
+                              AutoGenerateColumns="False"
+                              CanUserAddRows="True"
+                              HeadersVisibility="Column"
+                              Height="200"
+                              Margin="0,0,0,10">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Produto" Binding="{Binding Nome}" Width="*" />
+                            <DataGridTextColumn Header="Quantidade" Binding="{Binding Quantidade}" Width="150"/>
+                            <DataGridTextColumn Header="Preço Unitário" Binding="{Binding Preco}" Width="150"/>
+                            <DataGridTextColumn Header="Subtotal" Binding="{Binding Subtotal}" Width="150"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </StackPanel>
+            </Border>
+
+            <!-- Valor Total -->
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,0,0,20">
+                <TextBlock Text="Valor Total: " FontSize="18" FontWeight="Bold" VerticalAlignment="Center"/>
+                <TextBlock x:Name="ValorTotalTextBlock" Text="R$ 0,00" 
+                           FontSize="18" FontWeight="Bold" Foreground="Green" Margin="10,0,0,0"/>
+            </StackPanel>
+
+            <!-- Forma de Pagamento -->
+            <Border BorderBrush="LightGray" BorderThickness="1" CornerRadius="8" Padding="15" Margin="0,0,0,20">
+                <StackPanel>
+                    <TextBlock Text="Forma de Pagamento" FontSize="16" FontWeight="Bold" Margin="0,0,0,10"/>
+                    <ComboBox Height="30" Width="300" HorizontalAlignment="Left" SelectedIndex="0">
+                        <!-- Placeholder -->
+                        <ComboBoxItem IsEnabled="False" IsSelected="True">Selecione a forma de pagamento...</ComboBoxItem>
+                        <ComboBoxItem Content="Dinheiro"/>
+                        <ComboBoxItem Content="Cartão de Crédito"/>
+                        <ComboBoxItem Content="Cartão de Débito"/>
+                        <ComboBoxItem Content="Pix"/>
+                    </ComboBox>
+                </StackPanel>
+            </Border>
+
+            <!-- Botão Finalizar -->
+            <Button Content="Finalizar Pedido"
+                    Background="DodgerBlue"
+                    Foreground="White"
+                    FontWeight="Bold"
+                    Padding="15,10"
+                    FontSize="16"
+                    HorizontalAlignment="Right"
+                    Width="200"
+                    Cursor="Hand"/>
+        </StackPanel>
+    </ScrollViewer>
+</UserControl>

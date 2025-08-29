@@ -1,0 +1,94 @@
+﻿<UserControl x:Class="PRODUTO.FORM.View.Produtos.ProdutosUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="600" d:DesignWidth="1000">
+
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <StackPanel Margin="20" Background="White">
+
+            <!-- Título -->
+            <DockPanel Margin="0,0,0,20">
+                <TextBlock Text="Gerenciar Produtos"
+                           FontSize="24"
+                           FontWeight="Bold"
+                           VerticalAlignment="Center"
+                           DockPanel.Dock="Left"/>
+
+                <Button Content="+ Novo Produto"
+                        Background="LimeGreen"
+                        Foreground="White"
+                        FontWeight="Bold"
+                        Padding="10,5"
+                        Margin="10,0,0,0"
+                        HorizontalAlignment="Right"
+                        DockPanel.Dock="Right"
+                        Cursor="Hand" 
+                        Command="{Binding NovoProdutoCommand}"/>
+            </DockPanel>
+
+            <!-- Filtros -->
+            <Border BorderBrush="LightGray" BorderThickness="1" CornerRadius="8" Padding="15" Margin="0,0,0,20">
+                <StackPanel>
+                    <TextBlock Text="🔍 Filtros" FontSize="16" FontWeight="Bold" Margin="0,0,0,10"/>
+
+                    <Grid Margin="0,5,0,0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="2*" />
+                            <ColumnDefinition Width="2*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+
+                        <!-- Nome -->
+                        <StackPanel Grid.Column="0" Margin="0,0,10,0">
+                            <TextBlock Text="Nome" FontWeight="SemiBold" Margin="0,0,0,5"/>
+                            <TextBox Text="" 
+                                     BorderBrush="Gray" BorderThickness="1"
+                                     Padding="5" Height="30"/>
+                        </StackPanel>
+
+                        <!-- Código -->
+                        <StackPanel Grid.Column="1" Margin="0,0,10,0">
+                            <TextBlock Text="Código" FontWeight="SemiBold" Margin="0,0,0,5"/>
+                            <TextBox Text="" 
+                                     BorderBrush="Gray" BorderThickness="1"
+                                     Padding="5" Height="30"/>
+                        </StackPanel>
+
+                        <!-- Valor Mínimo -->
+                        <StackPanel Grid.Column="2" Margin="0,0,10,0">
+                            <TextBlock Text="Valor Mínimo" FontWeight="SemiBold" Margin="0,0,0,5"/>
+                            <TextBox Text="0,00"
+                                     BorderBrush="Gray" BorderThickness="1"
+                                     Padding="5" Height="30"/>
+                        </StackPanel>
+
+                        <!-- Valor Máximo -->
+                        <StackPanel Grid.Column="3">
+                            <TextBlock Text="Valor Máximo" FontWeight="SemiBold" Margin="0,0,0,5"/>
+                            <TextBox Text="0,00"
+                                     BorderBrush="Gray" BorderThickness="1"
+                                     Padding="5" Height="30"/>
+                        </StackPanel>
+                    </Grid>
+                </StackPanel>
+            </Border>
+
+            <!-- Produtos Cadastrados -->
+            <Border BorderBrush="LightGray" BorderThickness="1" CornerRadius="8" Padding="20">
+                <StackPanel>
+                    <TextBlock Text="Produtos Cadastrados (0)" 
+                               FontSize="16" FontWeight="Bold" Margin="0,0,0,10"/>
+                    <TextBlock Text="Nenhum produto cadastrado" 
+                               HorizontalAlignment="Center" 
+                               VerticalAlignment="Center"
+                               Foreground="Gray"
+                               Margin="0,20"/>
+                </StackPanel>
+            </Border>
+        </StackPanel>
+    </ScrollViewer>
+</UserControl>
