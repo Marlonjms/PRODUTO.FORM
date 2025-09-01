@@ -46,6 +46,10 @@ namespace PRODUTO.FORM
         {
             MainContent.Content = new CadastroProdutoUserControl();
         }
+        public void NavigateToCadastroPessoa()
+        {
+            MainContent.Content = new CadastroPessoaUserControl();
+        }
         private void Pedidos_Click(object sender, RoutedEventArgs args)
         {
             MainContent.Content = new PedidosUserControl();

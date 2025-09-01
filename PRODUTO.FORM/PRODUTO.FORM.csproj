@@ -73,6 +73,9 @@
     <Compile Include="View\Pedidos\PedidosUserControl.xaml.cs">
       <DependentUpon>PedidosUserControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\Pessoas\CadastroPessoaUserControl.xaml.cs">
+      <DependentUpon>CadastroPessoaUserControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Pessoas\PessoasUserControl.xaml.cs">
       <DependentUpon>PessoasUserControl.xaml</DependentUpon>
     </Compile>
@@ -99,6 +102,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\Pedidos\PedidosUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Pessoas\CadastroPessoaUserControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

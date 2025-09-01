@@ -16,15 +16,13 @@ using System.Windows.Shapes;
 namespace PRODUTO.FORM.View.Pessoas
 {
     /// <summary>
-    /// Interação lógica para PessoasUserControl.xam
+    /// Interação lógica para CadastroPessoa.xam
     /// </summary>
-    public partial class PessoasUserControl : UserControl
+    public partial class CadastroPessoaUserControl : UserControl
     {
-        public PessoasUserControl()
+        public CadastroPessoaUserControl()
         {
             InitializeComponent();
         }
-
-
     }
 }
