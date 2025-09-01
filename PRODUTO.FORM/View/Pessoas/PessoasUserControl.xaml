@@ -75,7 +75,7 @@
             <DockPanel>
                 <!-- Barra de Ações -->
                 <StackPanel Orientation="Horizontal" DockPanel.Dock="Top" Margin="0,0,0,10">
-                    <Button Content="Incluir"/>
+                    <Button Content="Incluir" Click="BtnIncluir_Click"/>
                     <Button Content="Editar" Style="{StaticResource SecondaryButton}"/>
                     <Button Content="Salvar" Style="{StaticResource SecondaryButton}"/>
                     <Button Content="Excluir" Style="{StaticResource SecondaryButton}"/>

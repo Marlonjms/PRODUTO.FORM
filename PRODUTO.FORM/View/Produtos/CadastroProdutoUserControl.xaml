@@ -56,18 +56,18 @@
         <!-- Formulário -->
         <Border Grid.Row="1" Background="White" CornerRadius="6" Padding="20" BorderBrush="#ddd" BorderThickness="1" Margin="200,0,200,0">
             <StackPanel>
-                <!-- Código -->
-                <StackPanel Margin="0 10">
-                    <TextBlock Text="Código:" FontSize="14" FontWeight="SemiBold" Foreground="#444"/>
-                    <TextBox x:Name="txtCodigo" Height="30" Margin="0 5 0 0"/>
-                </StackPanel>
+               
 
                 <!-- Nome -->
                 <StackPanel Margin="0 10">
                     <TextBlock Text="Nome:" FontSize="14" FontWeight="SemiBold" Foreground="#444"/>
                     <TextBox x:Name="txtNome" Height="30" Margin="0 5 0 0"/>
                 </StackPanel>
-
+                <!-- Código -->
+                <StackPanel Margin="0 10">
+                    <TextBlock Text="Código:" FontSize="14" FontWeight="SemiBold" Foreground="#444"/>
+                    <TextBox x:Name="txtCodigo" Height="30" Margin="0 5 0 0"/>
+                </StackPanel>
                 <!-- Valor -->
                 <StackPanel Margin="0 10">
                     <TextBlock Text="Valor:" FontSize="14" FontWeight="SemiBold" Foreground="#444"/>
@@ -78,8 +78,8 @@
 
         <!-- Botões -->
         <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 20">
-            <Button Content="Salvar" Width="120"/>
-            <Button Content="Voltar" Width="120" Style="{StaticResource SecondaryButton}"/>
+            <Button Content="Salvar" Width="120" Click="BtnSalvar_Click"/>
+            <Button Content="Voltar" Width="120" Style="{StaticResource SecondaryButton}" Click="BtnVoltar_Click"/>
         </StackPanel>
 
     </Grid>
