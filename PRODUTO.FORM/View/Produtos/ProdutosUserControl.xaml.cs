@@ -16,8 +16,7 @@ namespace PRODUTO.FORM.View.Produtos
             var produtos = new List<Produtos>
             {
                 new Produtos { Id = 1, Codigo = "P001", Nome = "Produto A", Valor = 50.0m },
-                new Produtos { Id = 2, Codigo = "P002", Nome = "Produto B", Valor = 75.0m },
-                new Produtos { Id = 3, Codigo = "P003", Nome = "Produto C", Valor = 120.0m },
+               
             };
             dgProdutos.ItemsSource = produtos;
         }
