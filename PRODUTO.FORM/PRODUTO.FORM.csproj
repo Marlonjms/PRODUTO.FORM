@@ -76,11 +76,17 @@
     <Compile Include="View\Pessoas\CadastroPessoaUserControl.xaml.cs">
       <DependentUpon>CadastroPessoaUserControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\Pessoas\EditarPessoasUserControl.xaml.cs">
+      <DependentUpon>EditarPessoasUserControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Pessoas\PessoasUserControl.xaml.cs">
       <DependentUpon>PessoasUserControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\Produtos\CadastroProdutoUserControl.xaml.cs">
       <DependentUpon>CadastroProdutoUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Produtos\EditarProdutoUserControl1.xaml.cs">
+      <DependentUpon>EditarProdutoUserControl1.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\Produtos\ProdutosUserControl.xaml.cs">
       <DependentUpon>ProdutosUserControl.xaml</DependentUpon>
@@ -109,11 +115,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\Pessoas\EditarPessoasUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\Pessoas\PessoasUserControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\Produtos\CadastroProdutoUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Produtos\EditarProdutoUserControl1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

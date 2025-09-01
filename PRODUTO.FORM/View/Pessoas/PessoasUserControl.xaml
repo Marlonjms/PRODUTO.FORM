@@ -49,14 +49,11 @@
     <Grid Background="#f9f9f9" Margin="20">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
-            <!-- Filtros -->
             <RowDefinition Height="2*"/>
-            <!-- Grid Pessoas -->
             <RowDefinition Height="2*"/>
-            <!-- Grid Pedidos -->
         </Grid.RowDefinitions>
 
-        <!-- ================= FILTROS ================= -->
+        <!-- FILTROS -->
         <Border Background="White" CornerRadius="6" Padding="10" Margin="0 0 0 10" BorderBrush="#ddd" BorderThickness="1">
             <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
                 <TextBlock Text="Nome:" VerticalAlignment="Center" Margin="0,0,5,0"/>
@@ -70,21 +67,20 @@
             </StackPanel>
         </Border>
 
-        <!-- ================= GRID DE PESSOAS ================= -->
+        <!-- GRID DE PESSOAS -->
         <Border Grid.Row="1" Background="White" CornerRadius="6" Padding="10" BorderBrush="#ddd" BorderThickness="1">
             <DockPanel>
-                <!-- Barra de Ações -->
                 <StackPanel Orientation="Horizontal" DockPanel.Dock="Top" Margin="0,0,0,10">
                     <Button Content="Incluir" Click="BtnIncluir_Click"/>
-                    <Button Content="Editar" Style="{StaticResource SecondaryButton}"/>
+                    <Button Content="Editar" Click="BtnEditar_Click" Style="{StaticResource SecondaryButton}"/>
                     <Button Content="Salvar" Style="{StaticResource SecondaryButton}"/>
                     <Button Content="Excluir" Style="{StaticResource SecondaryButton}"/>
                     <Button Content="Incluir Pedido"/>
                 </StackPanel>
 
-                <!-- DataGrid Pessoas -->
-                <DataGrid AutoGenerateColumns="False" CanUserAddRows="False" HeadersVisibility="Column">
+                <DataGrid x:Name="dgPessoas" AutoGenerateColumns="False" CanUserAddRows="False" HeadersVisibility="Column">
                     <DataGrid.Columns>
+                        <DataGridCheckBoxColumn Header="Selecionar" Binding="{Binding IsSelected}" Width="80"/>
                         <DataGridTextColumn Header="ID" Binding="{Binding Id}" Width="50" IsReadOnly="True"/>
                         <DataGridTextColumn Header="Nome" Binding="{Binding Nome}" Width="200"/>
                         <DataGridTextColumn Header="CPF" Binding="{Binding Cpf}" Width="150"/>
@@ -94,36 +90,22 @@
             </DockPanel>
         </Border>
 
-        <!-- ================= GRID DE PEDIDOS ================= -->
+        <!-- GRID DE PEDIDOS -->
         <Border Grid.Row="2" Background="White" CornerRadius="6" Padding="10" BorderBrush="#ddd" BorderThickness="1" Margin="0,10,0,0">
             <DockPanel>
-                <!-- Barra de Filtros Pedidos -->
                 <StackPanel Orientation="Horizontal" DockPanel.Dock="Top" Margin="0,0,0,10">
                     <CheckBox Content="Mostrar apenas entregues" Margin="0,0,15,0"/>
                     <CheckBox Content="Mostrar apenas pagos" Margin="0,0,15,0"/>
                     <CheckBox Content="Mostrar pendentes de pagamento"/>
                 </StackPanel>
 
-                <!-- DataGrid Pedidos -->
-                <DataGrid AutoGenerateColumns="False" CanUserAddRows="False" HeadersVisibility="Column">
+                <DataGrid x:Name="dgPedidos" AutoGenerateColumns="False" CanUserAddRows="False" HeadersVisibility="Column">
                     <DataGrid.Columns>
+                        <DataGridCheckBoxColumn Header="Selecionar" Binding="{Binding IsSelected}" Width="80"/>
                         <DataGridTextColumn Header="Data da Venda" Binding="{Binding DataVenda}" Width="150"/>
                         <DataGridTextColumn Header="Valor Total" Binding="{Binding ValorTotal}" Width="100"/>
                         <DataGridTextColumn Header="Forma de Pagamento" Binding="{Binding FormaPagamento}" Width="150"/>
                         <DataGridTextColumn Header="Status" Binding="{Binding Status}" Width="120"/>
-
-                        <!-- Botões de Ações -->
-                        <DataGridTemplateColumn Header="Ações" Width="250">
-                            <DataGridTemplateColumn.CellTemplate>
-                                <DataTemplate>
-                                    <StackPanel Orientation="Horizontal">
-                                        <Button Content="Marcar Pago"/>
-                                        <Button Content="Enviado" Style="{StaticResource SecondaryButton}"/>
-                                        <Button Content="Recebido" Style="{StaticResource SecondaryButton}"/>
-                                    </StackPanel>
-                                </DataTemplate>
-                            </DataGridTemplateColumn.CellTemplate>
-                        </DataGridTemplateColumn>
                     </DataGrid.Columns>
                 </DataGrid>
             </DockPanel>

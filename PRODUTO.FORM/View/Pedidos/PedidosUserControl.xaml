@@ -28,21 +28,24 @@
                 </StackPanel>
 
                 <!-- Adição de Produtos -->
-                <TextBlock Text="Produtos" FontSize="16" FontWeight="SemiBold" Margin="0,10,0,5"/>
-                <DataGrid x:Name="dgProdutos"
-                          AutoGenerateColumns="False" 
-                          CanUserAddRows="True"
-                          CanUserDeleteRows="True"
-                          HeadersVisibility="Column"
-                          Height="200" Margin="0,0,0,10">
-                    <DataGrid.Columns>
-                        <DataGridTextColumn Header="Código" Binding="{Binding Codigo}" Width="100"/>
-                        <DataGridTextColumn Header="Descrição" Binding="{Binding Descricao}" Width="*"/>
-                        <DataGridTextColumn Header="Quantidade" Binding="{Binding Quantidade}" Width="100"/>
-                        <DataGridTextColumn Header="Preço Unitário" Binding="{Binding PrecoUnitario}" Width="120"/>
-                        <DataGridTextColumn Header="Subtotal" Binding="{Binding Subtotal}" Width="120" IsReadOnly="True"/>
-                    </DataGrid.Columns>
-                </DataGrid>
+               <DataGrid x:Name="dgProdutos"
+          AutoGenerateColumns="False" 
+          CanUserAddRows="True"
+          CanUserDeleteRows="True"
+          HeadersVisibility="Column"
+          Height="200" Margin="0,0,0,10">
+    <DataGrid.Columns>
+        <!-- Coluna de Seleção -->
+        <DataGridCheckBoxColumn Header="Selecionar" Binding="{Binding IsSelected}" Width="80"/>
+        
+        <DataGridTextColumn Header="Código" Binding="{Binding Codigo}" Width="100"/>
+        <DataGridTextColumn Header="Descrição" Binding="{Binding Descricao}" Width="*"/>
+        <DataGridTextColumn Header="Quantidade" Binding="{Binding Quantidade}" Width="100"/>
+        <DataGridTextColumn Header="Preço Unitário" Binding="{Binding PrecoUnitario}" Width="120"/>
+        <DataGridTextColumn Header="Subtotal" Binding="{Binding Subtotal}" Width="120" IsReadOnly="True"/>
+    </DataGrid.Columns>
+</DataGrid>
+
 
                 <!-- Valor Total -->
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,10,0,0">
